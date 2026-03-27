@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Instrument+Sans:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0e0c09;
+  --bg2: #161310;
+  --bg3: #1e1a14;
+  --card: #211d17;
+  --border: rgba(255, 190, 80, 0.13);
+  --amber: #f5a623;
+  --amber2: #ffc95c;
+  --amber-dim: rgba(245, 166, 35, 0.12);
+  --text: #f5efe6;
+  --muted: #9e8f7a;
+  --accent: #e07b3c;
+  --green: #4caf7d;
+  --tag-bg: rgba(245, 166, 35, 0.1);
+  --tag-text: #f5a623;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Instrument Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--card); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #2e2820; }
