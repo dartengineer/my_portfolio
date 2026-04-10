@@ -2,25 +2,45 @@
 import { useState } from 'react'
 
 const contactLinks = [
-  { icon: '✉️', label: 'Email', value: 'favour@example.com', href: 'mailto:favour@example.com' },
-  { icon: '💬', label: 'WhatsApp', value: '+234 xxx xxx xxxx', href: 'https://wa.me/234xxxxxxxxxx' },
-  { icon: '🐙', label: 'GitHub', value: 'github.com/adeyemifavour', href: 'https://github.com' },
-  { icon: '💼', label: 'LinkedIn', value: 'linkedin.com/in/adeyemifavour', href: 'https://linkedin.com' },
+  { icon: '✉️', label: 'Email', value: 'dartengineer04@gmail.com', href: 'mailto:dartengineer04@gmail.com' },
+  { icon: '💬', label: 'WhatsApp', value: '+2347018689725', href: 'https://wa.me/2347018689725' },
+  { icon: '🐙', label: 'GitHub', value: 'github.com/dartengineer', href: 'https://github.com/dartengineer' },
+  { icon: '💼', label: 'LinkedIn', value: 'linkedin.com/in/adeyemifavour', href: 'https://www.linkedin.com/in/favour-adeyemi0404' },
 ]
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' })
   const [sent, setSent] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(false)
 
   const handleChange = e => setForm({ ...form, [e.target.name]: e.target.value })
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault()
-    // Replace this with Formspree or EmailJS integration
-    console.log('Form submitted:', form)
-    setSent(true)
-    setTimeout(() => setSent(false), 3000)
-    setForm({ name: '', email: '', message: '' })
+    setLoading(true)
+    setError(false)
+
+    try {
+      const response = await fetch('https://formspree.io/f/mpqogjoj', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+
+      if (response.ok) {
+        setSent(true)
+        setForm({ name: '', email: '', message: '' })
+        setTimeout(() => setSent(false), 3000)
+      } else {
+        setError(true)
+      }
+    } catch (err) {
+      console.error('Error submitting form:', err)
+      setError(true)
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -95,12 +115,18 @@ export default function Contact() {
             />
           </div>
 
-          <button type="submit" style={styles.submitBtn}
-            onMouseEnter={e => e.target.style.background = 'var(--amber2)'}
-            onMouseLeave={e => e.target.style.background = 'var(--amber)'}
+          <button type="submit" style={styles.submitBtn} disabled={loading}
+            onMouseEnter={e => !loading && (e.target.style.background = 'var(--amber2)')}
+            onMouseLeave={e => !loading && (e.target.style.background = 'var(--amber)')}
           >
-            {sent ? '✓ Message sent!' : 'Send message'}
+            {loading ? '⏳ Sending...' : sent ? '✓ Message sent!' : 'Send message'}
           </button>
+
+          {error && (
+            <p style={{ color: '#ff6b6b', fontSize: '0.9rem', marginTop: '0.5rem' }}>
+              ❌ Failed to send message. Please try again.
+            </p>
+          )}
         </form>
       </div>
     </section>
@@ -144,5 +170,9 @@ const styles = {
     fontWeight: 700, fontSize: '0.95rem', cursor: 'pointer',
     fontFamily: "'Instrument Sans', sans-serif",
     transition: 'background 0.2s', marginTop: '0.3rem',
+  },
+  submitBtnDisabled: {
+    opacity: 0.6,
+    cursor: 'not-allowed',
   },
 }

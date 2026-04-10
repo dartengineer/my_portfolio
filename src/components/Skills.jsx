@@ -31,6 +31,16 @@ const skillGroups = [
       { name: 'VS Code', level: 90 },
     ],
   },
+  {
+    name: 'Support & Operations',
+    skills: [
+      { name: 'Technical Documentation', level: 85 },
+      { name: 'Problem Solving & Troubleshooting', level: 80 },
+      { name: 'User Training & Onboarding', level: 78 },
+      { name: 'Customer Support & Communication', level: 82 },
+      { name: 'System Monitoring & Performance', level: 75 },
+    ],
+  },
 ]
 
 export default function Skills() {

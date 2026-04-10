@@ -1,6 +1,6 @@
 const stack = [
   'Flutter', 'React', 'Next.js', 'Tailwind CSS',
-  'Dart', 'JavaScript', 'Git & GitHub', 'Vercel', 'Figma',
+  'Dart', 'JavaScript', 'Git & GitHub' ,
 ]
 
 const timeline = [
