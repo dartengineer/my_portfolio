@@ -4,10 +4,10 @@ import { useState } from 'react'
 const projects = [
   {
     icon: '💰',
-    name: 'Ajo Manager',
-    desc: 'A digital thrift/savings manager app that helps groups track contributions, members, and payouts — inspired by the traditional Nigerian "Ajo" system.',
+    name: 'Adept.ml',
+    desc: '•Cross-platform AI assistant for business and communication management.',
     tags: ['Flutter', 'Dart', 'Mobile'],
-    link: '#',
+    link: 'https://adept.ml',
     linkText: 'View case study →',
     featured: true,
   },
@@ -16,7 +16,7 @@ const projects = [
     name: 'Messaging UI',
     desc: 'A clean, WhatsApp-inspired messaging interface built entirely in Flutter. Focused on smooth animations, chat bubbles, and real-time feel.',
     tags: ['Flutter', 'UI/UX', 'Animations'],
-    link: '#',
+    link: 'https://github.com/adept-ml/messaging-ui',
     linkText: 'View on GitHub →',
   },
   {
@@ -24,7 +24,7 @@ const projects = [
     name: 'FabricHub NG',
     desc: 'A marketplace concept for Nigerian fabric vendors and buyers — solving the problem of unreliable sourcing by connecting artisans with customers online.',
     tags: ['Next.js', 'Tailwind', 'E-commerce'],
-    link: '#',
+    link: 'https://the-african-store.vercel.app/',
     linkText: 'View case study →',
     featured: true,
     badge: 'Concept',
