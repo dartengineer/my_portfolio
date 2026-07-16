@@ -9,7 +9,7 @@ export default function Footer() {
     }}>
       Built by{' '}
       <span style={{ color: 'var(--amber)' }}>Adeyemi Favour Oluwapelumi</span>
-      {' '}· Web & Mobile App Developer · Nigeria 🇳🇬
+      {' '}· Web & Mobile App Developer ·
     </footer>
   )
 }

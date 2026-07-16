@@ -53,7 +53,7 @@ export default function Contact() {
           <h2 style={styles.title}>Let's build something real</h2>
           <p style={styles.body}>
             Whether you have a project idea, a problem to solve, or you just want to
-            say hi — I'm open. Based in Nigeria, available globally.
+            say hi — I'm open, available globally.
           </p>
           <p style={{ ...styles.body, marginBottom: 0 }}>
             Response time: usually within 24 hours.

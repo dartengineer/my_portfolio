@@ -1,8 +1,8 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'Adeyemi Favour Oluwapelumi — Web & Mobile App Developer',
-  description: 'Portfolio of Adeyemi Favour Oluwapelumi, a Web and Mobile App Developer based in Nigeria.',
+  title: 'Adeyemi Favour Oluwapelumi — Fullstack Developer & Mobile App Developer',
+  description: 'Portfolio of Adeyemi Favour Oluwapelumi, a Fullstack and Mobile App Developer.',
 }
 
 export default function RootLayout({ children }) {

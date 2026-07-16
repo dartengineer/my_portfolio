@@ -54,9 +54,9 @@ export default function Hero() {
             maxWidth: '520px', lineHeight: 1.75, marginBottom: '2.4rem',
           }}>
             <strong style={{ color: 'var(--text)', fontWeight: 500 }}>
-              Web & Mobile App Developer | Technical Support Specialist
+              Fullstack & Mobile App Developer | Technical Operations Support Specialist
             </strong>{' '}
-            based in Nigeria.<br />
+            <br />
             I build fast, scalable products that solve real problems — from elegant
             frontends to functional mobile apps.
           </p>
@@ -113,8 +113,8 @@ export default function Hero() {
         borderTop: '0.5px solid var(--border)',
       }}>
         {[
-          { num: '5+', label: 'Projects built' },
-          { num: '2+', label: 'Years of experience' },
+          { num: '8+', label: 'Projects built' },
+          { num: '3+', label: 'Years of experience' },
           { num: '2', label: 'Platforms: Web + Mobile' },
         ].map(({ num, label }) => (
           <div key={label}>

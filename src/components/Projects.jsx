@@ -12,12 +12,30 @@ const projects = [
     featured: true,
   },
   {
-    icon: '💬',
-    name: 'Messaging UI',
-    desc: 'A clean, WhatsApp-inspired messaging interface built entirely in Flutter. Focused on smooth animations, chat bubbles, and real-time feel.',
-    tags: ['Flutter', 'UI/UX', 'Animations'],
-    link: 'https://github.com/adept-ml/messaging-ui',
-    linkText: 'View on GitHub →',
+    icon: '🌐',
+    name: 'Miracle Mission International',
+    desc: 'A Global NGO platform that supports children and adults all across the globe, the website is used for managing donations, volunteers, and events. Built with React and Next.js.',
+    tags: ['React', 'Next.js', 'NGO'],
+    link: 'https://www.miraclemissionioi.net/',
+    linkText: 'View case study →',
+  },
+  {
+    icon: '🌐',
+    name: 'Redefinition Ministries',
+    desc: 'A ministries website used to manage church events, sermons, members, ministers and their training. Built with PHP and MySQL.',
+    tags: ['PHP', 'MySQL', 'Web Development'],
+    link: 'https://www.redefinitionministries.com/',
+    linkText: 'View case study →',
+  },
+  {
+    icon: '🌐',
+    name: 'Portfolios for Designers, Businesses, and Creators',
+    desc: 'A collection of modern, responsive portfolios designed to showcase creative work and attract clients and collaborators. Clean, intuitive, and fast.',
+    tags: ['Next.js', 'Tailwind', 'Vercel'],
+    link: 'https://cre8tiv.vercel.app/',
+    linkText: "View a sample →",
+    featured: true,
+    badge: 'Creative',
   },
   {
     icon: '🧵',
@@ -29,14 +47,8 @@ const projects = [
     featured: true,
     badge: 'Concept',
   },
-  {
-    icon: '🌐',
-    name: 'Personal Portfolio',
-    desc: 'This portfolio — designed and built to showcase my work, tell my story, and attract clients and collaborators. Clean, responsive, and fast.',
-    tags: ['Next.js', 'Tailwind', 'Vercel'],
-    link: '#',
-    linkText: "You're looking at it →",
-  },
+
+
 ]
 
 export default function Projects() {

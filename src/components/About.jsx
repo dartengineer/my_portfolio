@@ -1,13 +1,13 @@
 const stack = [
   'Flutter', 'React', 'Next.js', 'Tailwind CSS',
-  'Dart', 'JavaScript', 'Git & GitHub' ,
+  'Dart', 'JavaScript', 'PHP', 'MySQL', 'Git & GitHub'
 ]
 
 const timeline = [
   { event: 'Started learning web development', year: '2022' },
   { event: 'Built first Flutter mobile app', year: '2023' },
-  { event: 'Explored UI/UX design with Figma', year: '2023' },
-  { event: 'Launched projects on Vercel & GitHub', year: '2024' },
+  // { event: 'Explored UI/UX design with Figma', year: '2023' },
+  // { event: 'Launched projects on Vercel & GitHub', year: '2024' },
   { event: 'Building MVPs & real-world apps', year: '2025' },
 ]
 
@@ -31,7 +31,7 @@ export default function About() {
           <p style={styles.body}>
             I've been building tools that matter — from{' '}
             <strong style={styles.strong}>fintech-inspired apps</strong> to{' '}
-            <strong style={styles.strong}>e-commerce concepts</strong> rooted in Nigerian
+            <strong style={styles.strong}>e-commerce concepts</strong> rooted in
             market needs. Every project teaches me something new.
           </p>
           <p style={styles.body}>
